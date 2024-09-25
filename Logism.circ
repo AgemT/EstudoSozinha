@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="2.7.1" version="1.0">
+  This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
+
+  <lib desc="#Wiring" name="0">
+    <tool name="Pin">
+      <a name="facing" val="north"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#Memory" name="4"/>
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#Base" name="6">
+    <tool name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+  </lib>
+  <main name="main"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="6" map="Button2" name="Menu Tool"/>
+    <tool lib="6" map="Button3" name="Menu Tool"/>
+    <tool lib="6" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="6" name="Poke Tool"/>
+    <tool lib="6" name="Edit Tool"/>
+    <tool lib="6" name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+    <sep/>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="tristate" val="false"/>
+    </tool>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </tool>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+  </toolbar>
+  <circuit name="main">
+    <a name="circuit" val="main"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(20,110)" to="(20,120)"/>
+    <comp lib="0" loc="(20,50)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="6" loc="(132,542)" name="Text">
+      <a name="text" val="Ele atua como um &quot;distribuidor&quot; de sinal."/>
+    </comp>
+    <comp lib="6" loc="(1013,275)" name="Text">
+      <a name="text" val="Tunnels permitem conectar diferentes partes do circuito sem a necessidade de desenhar fios longos. Eles funcionam como atalhos ou &quot;túneis&quot; através do qual os sinais são transmitidos de um lugar para outro no circuito. Cada túnel tem um nome, e todos os túneis com o mesmo nome estão conectados eletricamente."/>
+    </comp>
+    <comp lib="6" loc="(196,34)" name="Text">
+      <a name="text" val="X: sinal indefinido, que indica um erro ou condição indefinida."/>
+    </comp>
+    <comp lib="2" loc="(50,640)" name="BitSelector"/>
+    <comp lib="4" loc="(670,10)" name="S-R Flip-Flop"/>
+    <comp lib="0" loc="(10,190)" name="Splitter"/>
+    <comp lib="6" loc="(621,217)" name="Text">
+      <a name="text" val="Splitters são usados para dividir ou combinar fios que transportam múltiplos bits. Eles são úteis quando você quer manipular parte de um barramento ou combinar várias saídas em um único sinal."/>
+    </comp>
+    <comp lib="6" loc="(392,671)" name="Text">
+      <a name="text" val="é um circuito ou operação que seleciona um ou mais bits de uma palavra de dados ou registro e os direciona para a saída."/>
+    </comp>
+    <comp lib="0" loc="(30,300)" name="Probe"/>
+    <comp lib="6" loc="(932,61)" name="Text">
+      <a name="text" val="Tem duas entradas (S e R). O estado do flip-flop pode ser &quot;setado&quot; (S = 1) ou &quot;resetado&quot; (R = 1)."/>
+    </comp>
+    <comp lib="2" loc="(40,590)" name="Decoder"/>
+    <comp lib="2" loc="(50,790)" name="Priority Encoder"/>
+    <comp lib="0" loc="(20,120)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="2" loc="(40,400)" name="Multiplexer"/>
+    <comp lib="4" loc="(50,690)" name="T Flip-Flop"/>
+    <comp lib="2" loc="(10,490)" name="Demultiplexer"/>
+    <comp lib="6" loc="(574,610)" name="Text">
+      <a name="text" val="A cada combinação binária aplicada nas entradas, uma linha correspondente de saída é ativada. Ou seja, ele “decodifica” o valor de entrada para acionar uma linha única de saída."/>
+    </comp>
+    <comp lib="6" loc="(246,16)" name="Text">
+      <a name="text" val="Z: alta impedância, significa que o fio não está conectado a uma fonte ativa."/>
+    </comp>
+    <comp lib="4" loc="(670,90)" name="D Flip-Flop"/>
+    <comp lib="4" loc="(1300,180)" name="J-K Flip-Flop"/>
+    <comp lib="0" loc="(10,240)" name="Tunnel"/>
+    <comp lib="6" loc="(764,860)" name="Text">
+      <a name="text" val="é um tipo de encoder (codificador) que converte várias entradas em um código binário, mas dá prioridade a uma entrada específica, caso múltiplas entradas sejam ativas ao mesmo tempo. Ele sempre codifica a entrada de maior prioridade."/>
+    </comp>
+    <comp lib="6" loc="(334,738)" name="Text">
+      <a name="text" val="Muda de estado (0 para 1 ou 1 para 0) toda vez que o clock faz uma transição. Usado em contadores. "/>
+    </comp>
+    <comp lib="6" loc="(430,370)" name="Text">
+      <a name="text" val="Um componente que pode ser inserido para gerar valores constantes (0 ou 1) que podem ser usados em diferentes partes do circuito."/>
+    </comp>
+    <comp lib="6" loc="(869,442)" name="Text">
+      <a name="text" val="é um circuito combinacional que seleciona um de vários sinais de entrada e o direciona para uma única saída. Ele atua como um &quot;selecionador&quot; de sinal, permitindo que apenas uma das entradas seja transmitida para a saída com base em um conjunto de sinais de controle."/>
+    </comp>
+    <comp lib="6" loc="(1634,225)" name="Text">
+      <a name="text" val="É uma variação do SR, mas resolve o problema da condição indefinida. Quando J e K são ambos 1, ele inverte o estado."/>
+    </comp>
+    <comp lib="6" loc="(297,91)" name="Text">
+      <a name="text" val="Input Pin (Pino de Entrada): Um componente que injeta um valor digital no circuito (0 ou 1)."/>
+    </comp>
+    <comp lib="6" loc="(1122,138)" name="Text">
+      <a name="text" val="Armazena o valor presente na entrada D quando o clock faz uma transição (bordo de subida ou descida). É amplamente usado em registradores e memórias."/>
+    </comp>
+    <comp lib="6" loc="(292,158)" name="Text">
+      <a name="text" val="Output Pin (Pino de Saída): Um pino que permite observar o valor resultante de um circuito."/>
+    </comp>
+    <comp lib="0" loc="(30,340)" name="Constant"/>
+    <comp lib="6" loc="(523,330)" name="Text">
+      <a name="text" val="Probes são ferramentas de depuração que mostram o valor atual de um fio. Eles ajudam a visualizar se o sinal no fio é 0, 1, indefinido (X), ou de alta impedância (Z)."/>
+    </comp>
+  </circuit>
+</project>
